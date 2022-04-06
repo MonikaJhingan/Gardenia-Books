@@ -16,7 +16,7 @@ export const Navbar = () => {
     <nav className="nav-menu navbar">
       <h1 className="nav-menu-logo">
         <Link to="/" className="text-decorations text-white">
-          Gotham Store
+          Gardenia Books
         </Link>
       </h1>
       <div className="search">
