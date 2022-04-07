@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 import { useAuth } from "../../context/auth-context";
-import { useCart } from "context/cart-context";
-import { useWishlist } from "context/wishlist-context";
+import { useCart } from "../../context/cart-context";
+import { useWishlist } from "../../context/wishlist-context";
 
 export const Navbar = () => {
   
