@@ -1,6 +1,6 @@
 import React from "react";
 import "./CartSummary.css";
-import { useCart } from "context/cart-context";
+import { useCart } from "../../context/cart-context";
 
 export const CartSummary = () => {
   const { itemsAdded, calculatePrice, discountPerBook, totalCartItems } =

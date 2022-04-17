@@ -61,7 +61,7 @@
     cursor: pointer;
   }
   .cart-button-remove {
-    background-color: var(--secondary-color);
+    background-color: black;
   }
   .cart-button-move,
   .cart-button-remove {

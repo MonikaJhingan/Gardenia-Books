@@ -1,20 +1,26 @@
+
+:root {
+  --primary-color: white;
+  --secondary-color:black;
+}
+ 
+
 .App-header {
-  background-color: #22201c;
+  background-color: #5c4008;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: rgb(168, 18, 18);
 }
-
 .App-link {
-  color: #61dafb;
+  color: #0f333d;
 }
 
 .brand-title {
   font-size: 3rem;
-  color: #d9d9d9;
+  color:green;
 }
 
 .brand-title span {
@@ -22,7 +28,7 @@
 }
 
 .brand-description {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 
 .links {
@@ -30,7 +36,7 @@
 }
 
 .links a {
-  color: #d9d9d9;
-  font-size: 1.2rem;
-  margin: 1rem;
+  color: #980808;
+  font-size: 2rem;
+  margin: 2rem;
 }

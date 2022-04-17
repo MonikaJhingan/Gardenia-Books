@@ -1,5 +1,5 @@
 import React from "react";
-import "./SiginUpComponent.css";
+import "./SignUpComponent.css";
 import { useReducer } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
