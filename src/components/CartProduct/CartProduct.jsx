@@ -1,5 +1,5 @@
-import { useCart } from "context/cart-context";
-import { useWishlist } from "context/wishlist-context";
+import { useCart } from "../../context/cart-context";
+import { useWishlist } from "../../context/wishlist-context";
 import React from "react";
 import "./CartProduct.css";
 

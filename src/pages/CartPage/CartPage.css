@@ -1,5 +1,8 @@
-.cart-page{
+cart-page{
     margin-top: 5rem;
     display: flex;
     justify-content: center;
+}
+.alert{
+    position: fixed;
 }

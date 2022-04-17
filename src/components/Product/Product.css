@@ -1,4 +1,17 @@
-.cart-secondary{
-    text-decoration: none;
-    color: white;
-  }
+.rating {
+  margin-left: 1rem;
+}
+.cart-secondary {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.card-title {
+  color: var(--black);
+  font-weight: 500;
+}
+.card-btns {
+  margin-top: 2rem;
+}
+.card{
+  background-color: rgb(146, 197, 128);
+}

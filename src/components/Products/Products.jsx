@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Product } from "../Product/Product";
 import { useProduct } from "../../context/product-context";
-import  {filterByCategory, sortByPrice, sortByRating, filterByPriceRange} from '../../SortingAndFiltering/index'
+import  {filterByCategory, sortByPrice, sortByRating, filterByPriceRange} from '../../SortingAndFiltering/index';
 
 import "./Products.css";
 

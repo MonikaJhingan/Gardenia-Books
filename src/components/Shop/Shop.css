@@ -1,22 +1,27 @@
 .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column ;
-    height: 25rem;
-  }
-  .container-title{
-    color: var(--secondary-color);
-    font-size: 3rem;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column ;
+  height: 10rem;
+  margin-top: 10rem;
+  background-color: var(--secondary-color);
+}
+.container-title{
+  color: var(--primary-color);
+  font-size: 3.3rem;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+}
 
-  .btn-shop{
-    color: var(--primary-color);
-  
-  }
-    
-  .btn{ 
-    margin-top: 1rem;
-    cursor: pointer;
-    background-color: var(--secondary-color);
-  }
+.btn{ 
+  margin-top: 1rem;
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+.btn-shop{
+  color: var(--secondary-color);
+}
+.btn-shop:hover{
+  color: var(--black);
+}

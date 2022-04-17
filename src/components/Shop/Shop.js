@@ -5,7 +5,8 @@ export const Shop = () => {
   return (
     <div>
       <main className="container">
-        <h1 className="container-title">store for bibliophiles</h1>
+        <h1 className="container-title">Heaven of Books!!! Explore Now!!! :)</h1>
+        
 
         <button className="btn btn-link">
           <Link to={"/products"} className="btn-text-decoration btn-shop ">

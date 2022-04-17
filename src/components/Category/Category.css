@@ -4,16 +4,22 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    padding: 1rem 0;
+    padding: 5rem 0;
 }
 
 .category {
     position: relative;
-    border: 3px solid var(--secondary-color);
-    box-shadow: 5px 5px var(--gray);
+    border: 9px solid var(--secondary-color);
+    box-shadow: 20px 20px var(--gray);
     cursor: pointer;
 }
-
+.categories-title{
+    width: 17rem;
+    margin: 1.3rem auto;
+    font-size: 3rem;
+    color: var(--secondary-color);
+    
+}
 .category-title {
     position: absolute;
     top: 5rem;
@@ -22,8 +28,15 @@
     text-align: center;
     text-transform: uppercase;
     padding: 8px 0;
-}
 
-.category-title:hover {
-    background-color: var(--gray);
+}
+.title{
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.title:hover {
+    color: var(--black);
+
 }

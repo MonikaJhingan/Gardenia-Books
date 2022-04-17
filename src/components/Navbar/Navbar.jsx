@@ -15,8 +15,8 @@ export const Navbar = () => {
   return (
     <nav className="nav-menu navbar">
       <h1 className="nav-menu-logo">
-        <Link to="/" className="text-decorations text-white">
-          Gardenia Books
+        <Link to="/" className="text-decorations text-white nav-logo">
+          GARDENIA BOOKS
         </Link>
       </h1>
       <div className="search">

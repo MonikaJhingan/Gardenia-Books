@@ -48,7 +48,7 @@ const CartProvider = ({ children }) => {
       const response = await axios({
         method: "post",
         url: "/api/user/cart",
-        headers: { authorization: auth.token },
+        headers: { authorization:auth.token },
         data: { product: product },
       });
       setItemsAdded(response.data.cart);
