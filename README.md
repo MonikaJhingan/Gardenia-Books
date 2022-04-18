@@ -1,3 +1,11 @@
+
+
+https://user-images.githubusercontent.com/67049170/163767335-0107dce1-6254-4668-8cd6-eaf1a0862c6a.mp4
+
+
+
+https://user-images.githubusercontent.com/67049170/163767379-f15998f5-7eaf-4beb-839a-de326ad89491.mp4
+
 # Gardenia Books
 
 Gardenia Books is an online shopping store specifically for books.
@@ -52,8 +60,15 @@ I can see a logout button from where I can log out from the app on the header na
 
 
 ## E-Commerce Backend
-
 This folder contains the Mock Backend created for E-Commerce App. It contains different API end-points and database configuration for building E-Commerce; so that you can focus on building Frontend.
+
+## Preview of the app
+
+
+https://user-images.githubusercontent.com/67049170/163767417-267fc7f0-309f-46b7-aa07-2ea3d3d65398.mp4
+
+
+
 
 
 
