@@ -5,6 +5,8 @@
     text-transform: capitalize;
     box-shadow: 5px 5px var(--gray);
     margin-bottom: 1rem;
+    margin-top: 8rem;
+    margin-left: 3rem;
   }
   .cart-products-heading {
     text-align: center;
@@ -61,7 +63,7 @@
     cursor: pointer;
   }
   .cart-button-remove {
-    background-color: black;
+    background-color: rgb(43, 218, 15);
   }
   .cart-button-move,
   .cart-button-remove {
