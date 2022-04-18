@@ -4,7 +4,7 @@
     box-shadow: 5px 5px var(--gray);
     width: 15rem;
     padding: 1rem;
-    margin-left: 1rem;
+    margin-left: 8.5rem;
     height: 20rem;
   }
   .price-heading,
@@ -38,11 +38,12 @@
   }
   .price-btn {
     width: 13rem;
-    background-color: var(--secondary-color);
+    background-color: rgb(22, 227, 22);
     padding: 3px 7px;
-    margin: 6px 0;
+    margin: 8px 0;
     text-transform: capitalize;
     border: none;
     width: 9rem;
     cursor: pointer;
+    margin-left: 25px;
   }
