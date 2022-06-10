@@ -11,7 +11,19 @@
 }
 .card-btns {
   margin-top: 2rem;
+  
 }
 .card{
   background-color: rgb(146, 197, 128);
+  
+}
+.fa-star{
+  margin-left: 5px;
+}
+.card-logo{
+  height: 14rem;
+}
+.cart-move, .cart-wishlist{
+  text-decoration: none;
+  color: var(--primary-color);
 }

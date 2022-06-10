@@ -3,14 +3,18 @@ import { useWishlist } from "../../context/wishlist-context";
 import React from "react";
 import "./Product.css";
 import { Link } from "react-router-dom";
+import { productExists } from "utility/productExists";
+
 export const Product = ({ product }) => {
   const { addToCart, itemsAdded } = useCart();
   const { addToWishlist, wishlistItems } = useWishlist();
-  const { image, name, price, star } = product;
+  const { image, name, price, star, _id } = product;
 
   return (
     <div className="card card-vertical ">
+    <Link to={`/products/${_id}`}>
       <img src={image} alt="" className="card-logo" />
+      </Link>
       <p className="card-title">{name}</p>
       <div className="card-price">
         ₹ {price}
@@ -21,32 +25,32 @@ export const Product = ({ product }) => {
       </div>
 
       <div className="card-btns">
-        {itemsAdded.some((items) => items._id === product._id) ? (
-          <button className="card-btn card-vertical-btn ">
-            <Link className="cart-secondary" to="/cart">
-              Move to Cart
-            </Link>
-          </button>
-        ) : (
-          <button
-            className="card-btn card-vertical-btn"
-            onClick={() => addToCart(product)}
-          >
-            add to cart
-          </button>
-        )}
-        {wishlistItems.some((items) => items._id === product._id) ? (
-          <button className="card-btn card-vertical-btn ">
-            <Link className="cart-secondary" to="/wishlist">
-              Move to Wishlist
-            </Link>
-          </button>
-        ) : (
-          <button className="card-btn" onClick={() => addToWishlist(product)}>
-            add to wishlist
-          </button>
-        )}
-      </div>
+      {productExists(itemsAdded, product) ? (
+        <button className="card-btn ">
+          <Link className="cart-secondary cart-move" to="/cart">
+            Move to Cart
+          </Link>
+        </button>
+      ) : (
+        <button
+          className="card-btn "
+          onClick={() => addToCart(product)}
+        >
+          add to cart
+        </button>
+      )}
+      {productExists(wishlistItems, product) ? (
+        <button className="card-btn card-vertical-btn ">
+          <Link className="cart-secondary cart-wishlist" to="/wishlist">
+            Move to Wishlist
+          </Link>
+        </button>
+      ) : (
+        <button className="card-btn" onClick={() => addToWishlist(product)}>
+          add to wishlist
+        </button>
+      )}
     </div>
-  );
+  </div>
+);
 };

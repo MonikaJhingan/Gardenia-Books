@@ -1,0 +1,13 @@
+.profile{
+   height: 100vh;
+   display: flex;;
+   justify-content: center;
+   align-items: center;
+}
+.card-simple{
+   width: 18rem;
+}
+.profile-username, .profile-email{
+color: var(--secondary-color);
+font-size: 1.3rem;
+}

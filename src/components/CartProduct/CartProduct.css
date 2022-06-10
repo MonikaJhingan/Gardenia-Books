@@ -1,12 +1,14 @@
 .cart-card {
     display: flex;
     border: 1px solid var(--secondary-color);
-    width: 26rem;
+    width: 30rem;
     text-transform: capitalize;
     box-shadow: 5px 5px var(--gray);
     margin-bottom: 1rem;
     margin-top: 8rem;
     margin-left: 3rem;
+    background-color: rgb(146, 197, 128);
+
   }
   .cart-products-heading {
     text-align: center;
@@ -63,8 +65,8 @@
     cursor: pointer;
   }
   .cart-button-remove {
-    background-color: rgb(43, 218, 15);
-  }
+    background-color: var(--secondary-color);
+    color: var(--primary-color);  }
   .cart-button-move,
   .cart-button-remove {
     padding: 3px 7px;

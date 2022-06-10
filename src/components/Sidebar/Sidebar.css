@@ -1,11 +1,10 @@
 .sidebar {
-  margin-top: 1rem;
   width: 14rem;
   position: fixed;
   border-right: 1px solid var(--secondary-color);
-  padding: 0.4rem 0;
   overflow-y: scroll;
-  max-height: 25rem;
+  max-height: 90rem;
+  background-color: yellowgreen;
 }
 .filter-btn,
 .filter-text {

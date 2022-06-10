@@ -5,22 +5,41 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/auth-context";
 import { signupReducer } from "../../reducer/signup-reducer";
+import { useToast } from "hooks/useToast";
+
 export const SignUpComponent = () => {
-  const [{ firstName, lastName, email, password }, dispatch] = useReducer(
+  const [{ 
+    firstName,
+     lastName,
+     email,
+     password,
+     confirmPassword,
+     passwordType,
+     confirmPasswordType, 
+    },
+     dispatch] = useReducer(
     signupReducer,
     {
       firstName: "",
       lastName: "",
       email: "",
       password: "",
+      confirmPassword: "",
+      passwordType: "password",
+      confirmPasswordType: "password",
     }
   );
 
   const { setAuth } = useAuth();
   const navigate = useNavigate();
+  const { showToast } = useToast();
+
 
   const signupHandler = async (e) => {
     e.preventDefault();
+    if (password !== confirmPassword) {
+      showToast("error", "password din't match");
+    } else {
 
     try {
       const response = await axios.post(`/api/auth/signup`, {
@@ -28,31 +47,37 @@ export const SignUpComponent = () => {
         lastName,
         email,
         password,
+        confirmPassword,
       });
-      const { data } = response;
-      if (data) {
-        const { createdUser, encodedToken } = data;
+      const {
+        status,
+        data: { encodedToken, createdUser },
+      } = response;
+
+      if (status >= 200 && status <= 299) {
         setAuth({
-          user: { ...createdUser },
-          token: encodedToken,
+          ...auth,
           auth: true,
+          user: createdUser,
+          token: encodedToken,
         });
         localStorage.setItem("token", encodedToken);
         navigate("/");
-      } else {
-        console.log("login failed");
+        showToast("success", "Account Created Successfully!");
       }
     } catch (error) {
-      console.log(error);
+      showToast("error", "Something went wrong with server!");
     }
-  };
+  }
+};
 
   return (
     <div className="signup-section">
       <div className="signup-form">
         <h2 className="signup-form-title">signup</h2>
         <form>
-          <label className="label" htmlFor="fname">
+        <form onSubmit={signupHandler}>
+           <label className="label" htmlFor="fname">
             first name
             <input
               onChange={(e) =>
@@ -66,6 +91,8 @@ export const SignUpComponent = () => {
               placeholder="enter your first name"
               className="input"
               value={firstName}
+              required
+
             />
           </label>
           <label className="label" htmlFor="lname">
@@ -82,6 +109,8 @@ export const SignUpComponent = () => {
               placeholder="enter your last name"
               className="input"
               value={lastName}
+              required
+
             />
           </label>
           <label className="label" htmlFor="email">
@@ -98,10 +127,13 @@ export const SignUpComponent = () => {
               placeholder="xyz@gmail.com"
               className="input"
               value={email}
+              required
+
             />
           </label>
           <label className="label" htmlFor="password">
             Password
+            <div className="password-input">
             <input
               onChange={(e) =>
                 dispatch({
@@ -109,21 +141,83 @@ export const SignUpComponent = () => {
                   payload: e.target.value,
                 })
               }
-              type="password"
+              type={passwordType}
               id="password"
               placeholder="*********"
               className="input"
               value={password}
+              required
             />
+
+            {passwordType === "password" ? (
+              <i
+                className="fa fa-eye-slash password-icons"
+                onClick={() =>
+                  dispatch({ type: "PASSWORD_VISIBLITY", payload: "text" })
+                }
+              ></i>
+            ) : (
+              <i
+                className="fa fa-eye password-icons"
+                onClick={() =>
+                  dispatch({
+                    type: "PASSWORD_VISIBLITY",
+                    payload: "password",
+                  })
+                }
+              ></i>
+            )}
+          </div>
+        </label>
+        <label className="label" htmlFor="confirm-password">
+          Confirm Password
+          <div className="password-input">
+            <input
+              onChange={(e) =>
+                dispatch({
+                  type: "CONFIRM_PASSWORD",
+                  payload: e.target.value,
+                })
+              }
+              type={confirmPasswordType}
+              id="confirm-password"
+              placeholder="*********"
+              className="input"
+              value={confirmPassword}
+              required
+            />
+
+            {confirmPasswordType === "password" ? (
+              <i
+                className="fa fa-eye-slash password-icons"
+                onClick={() =>
+                  dispatch({
+                    type: "CONFIRM_PASSWORD_VISIBLITY",
+                    payload: "text",
+                  })
+                }
+              ></i>
+            ) : (
+              <i
+                className="fa fa-eye password-icons"
+                onClick={() =>
+                  dispatch({
+                    type: "CONFIRM_PASSWORD_VISIBLITY",
+                    payload: "password",
+                  })
+                }
+              ></i>
+            )}
+          </div>
           </label>
 
           <div className="t-and-c">
             <label className="label" htmlFor="t&c">
-              <input name="t&c" id="t&c" type="checkbox" />I accept terms and
+              <input name="t&c" id="t&c" type="checkbox" required />I accept terms and
               condition
             </label>
           </div>
-          <button className="signup-btn" onClick={signupHandler}>
+          <button className="signup-btn">
             create new account
           </button>
           <div className="have-account">
@@ -131,6 +225,7 @@ export const SignUpComponent = () => {
               already have an account
             </Link>
           </div>
+          </form>
         </form>
       </div>
     </div>

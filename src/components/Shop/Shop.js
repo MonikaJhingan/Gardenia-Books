@@ -7,12 +7,6 @@ export const Shop = () => {
       <main className="container">
         <h1 className="container-title">Heaven of Books!!! Explore Now!!! :)</h1>
         
-
-        <button className="btn btn-link">
-          <Link to={"/products"} className="btn-text-decoration btn-shop ">
-            shop now
-          </Link>
-        </button>
       </main>
     </div>
   );
