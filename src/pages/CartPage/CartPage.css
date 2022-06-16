@@ -1,8 +1,8 @@
 .cart-page{
-    margin-top: 10rem;
+    margin-top: 5rem;
     display: flex;
     justify-content: center;
-    background-color: peachpuff;
+    background-color: rgb(244, 203, 167);
 }
 .alert{
     position: fixed;
