@@ -12,6 +12,7 @@
 .card-btns {
   margin-top: 2rem;
   
+  
 }
 .card{
   background-color: rgb(146, 197, 128);
@@ -25,5 +26,6 @@
 }
 .cart-move, .cart-wishlist{
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
