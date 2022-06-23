@@ -19,7 +19,6 @@
 .search{
 border: 2px solid var(--secondary-color);
 padding: 5px;
-background-color: var(--secondary-color);
 }
 .fa-search{
     color: var(--primary-color);
