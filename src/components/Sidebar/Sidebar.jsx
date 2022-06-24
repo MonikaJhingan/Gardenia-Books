@@ -20,12 +20,7 @@ const ratingFilters = [
     forAndId: "two",
     ratingType: "ABOVE_TWO",
   },
-  {
-    id: uuid(),
-    rate: "1 star & above",
-    forAndId: "one",
-    ratingType: "ABOVE_ONE",
-  },
+
 ];
 
 export const SideBar = () => {
