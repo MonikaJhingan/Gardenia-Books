@@ -2,12 +2,12 @@
   width: 14rem;
   position: fixed;
   border-right: 1px solid var(--secondary-color);
-  overflow-y: scroll;
-  max-height: 90rem;
+  height: 500rem;
   background-color: yellowgreen;
 }
 .filter-btn,
 .filter-text {
+  margin-top:40px;
   display: inline;
   color: var(--secondary-color);
 }
