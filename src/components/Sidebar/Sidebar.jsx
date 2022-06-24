@@ -51,7 +51,7 @@ export const SideBar = () => {
       </button>
 
       <div className="slider-container">
-        <p className="slider-heading">{range}</p>
+        <p className="slider-heading">Rs {range}</p>
         <input
           type="range"
           className="slider"
