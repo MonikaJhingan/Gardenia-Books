@@ -30,20 +30,22 @@ export const CartProduct = () => {
 
                 <div className="cart-quantity">
                   <div className="cart-quantity-head">Quantity:</div>
+                 
                   <button
-                    disabled={isDisable}
-                    className="cart-quantity-minus"
-                    onClick={() => decrementQuantity(product)}
-                  >
-                    -
-                  </button>
+                  className="cart-quantity-plus"
+                  onClick={() => incrementQuantity(product)}
+                >
+                  +
+                </button>
                   <div className="cart-quantity-value">{qty}</div>
                   <button
-                    className="cart-quantity-plus"
-                    onClick={() => incrementQuantity(product)}
-                  >
-                    +
-                  </button>
+                  disabled={isDisable}
+                  className="cart-quantity-minus"
+                  onClick={() => decrementQuantity(product)}
+                >
+                  -
+                </button>
+                 
                 </div>
                 <div className="cart-buttons">
                   <button
