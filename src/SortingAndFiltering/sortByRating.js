@@ -17,12 +17,6 @@ function sortByRating(filteredProducts, rating) {
       );
       return filterByThree;
     }
-    if (rating === "ABOVE_ONE") {
-      const filterByThree = filteredProducts.filter(
-        (product) => 1 <= product.star
-      );
-      return filterByThree;
-    }
     return filteredProducts;
   }
   
