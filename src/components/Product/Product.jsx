@@ -40,7 +40,7 @@ export const Product = ({ product }) => {
         </button>
       )}
       {productExists(wishlistItems, product) ? (
-        <button className="card-btn card-vertical-btn ">
+        <button className="card-btn">
           <Link className="cart-secondary cart-wishlist" to="/wishlist">
             Move to Wishlist
           </Link>
